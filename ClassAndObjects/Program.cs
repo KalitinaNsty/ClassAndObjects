@@ -27,6 +27,7 @@ namespace ClassAndObjects
             nowTime.AddSecond(2);
             string printTime = nowTime.GetTime();
             Console.WriteLine(printTime);
+            
         }
     }
 }
