@@ -15,30 +15,42 @@ namespace ClassAndObjects
         }
         public Time(int hour)
         {
-            this.hour = hour;
-            if (hour > 24)
+            if (hour > 24 || hour < 0)
             {
                 this.hour = 0;
             }
+            this.hour = hour;
         }
         public Time(int minute, int hour)
         {
+            if (hour > 24 || hour < 0)
+            {
+                this.hour = 0;
+            }
             this.hour = hour;
-            this.minute = minute;
-            if (minute > 60)
+            if (minute > 60 || minute < 0)
             {
                 this.minute = 0;
             }
+            this.minute = minute;
         }
         public Time(int hour, int minute, int second)
         {
+            if (hour > 24 || hour < 0)
+            {
+                this.hour = 0;
+            }
             this.hour = hour;
+            if (minute < 60 || minute < 0)
+            {
+                this.minute = 0;
+            }
             this.minute = minute;
-            this.second = second;
-            if (second < 60)
+            if (second < 60 || second < 0)
             {
                 this.second = 0;
             }
+            this.second = second;
         }
         public string GetTime()
         {
@@ -62,7 +74,7 @@ namespace ClassAndObjects
         }
         public void SetHour(int hour)
         {
-            if (hour >= 24 && hour < 0)
+            if (hour >= 24 || hour < 0)
             {
                 return;
             }
@@ -70,7 +82,7 @@ namespace ClassAndObjects
         }
         public void SetMinute(int minute)
         {
-            if (minute <= 60 && minute < 0)
+            if (minute <= 60 || minute < 0)
             {
                 return;
             }
@@ -78,7 +90,7 @@ namespace ClassAndObjects
         }
         public void SetSecond(int second)
         {
-            if (second >= 60 && second < 0)
+            if (second >= 60 || second < 0)
             {
                 return;
             }
