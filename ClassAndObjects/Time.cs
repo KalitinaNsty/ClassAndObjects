@@ -78,15 +78,21 @@ namespace ClassAndObjects
             {
                 return;
             }
-            this.hour = hour;
+            else
+            {
+                this.hour = hour;
+            }
         }
         public void SetMinute(int minute)
         {
-            if (minute <= 60 || minute < 0)
+            if (minute >= 60 || minute < 0)
             {
                 return;
             }
-            this.minute = minute;
+            else
+            {
+                this.minute = minute;
+            }
         }
         public void SetSecond(int second)
         {
@@ -94,7 +100,10 @@ namespace ClassAndObjects
             {
                 return;
             }
-            this.second = second;
+            else
+            {
+                this.second = second;
+            }
         }
         public int GetHour()
         {
