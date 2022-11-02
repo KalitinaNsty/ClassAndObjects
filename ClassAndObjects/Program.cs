@@ -23,7 +23,7 @@ namespace ClassAndObjects
             Time nowTime = new Time();
             nowTime.SetSecond(59);
             nowTime.SetMinute(59);
-            nowTime.SetHour(00);
+            nowTime.SetHour(07);
             nowTime.AddSecond(2);
             string printTime = nowTime.GetTime();
             Console.WriteLine(printTime);

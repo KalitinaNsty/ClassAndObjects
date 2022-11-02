@@ -15,7 +15,7 @@ namespace ClassAndObjects
         }
         public Time(int hour)
         {
-            if (hour > 24 || hour < 0)
+            if (hour >= 24 || hour < 0)
             {
                 this.hour = 0;
             }
@@ -26,7 +26,7 @@ namespace ClassAndObjects
         }
         public Time(int minute, int hour)
         {
-            if (hour > 24 || hour < 0)
+            if (hour >= 24 || hour < 0)
             {
                 this.hour = 0;
             }
@@ -34,7 +34,7 @@ namespace ClassAndObjects
             {
                 this.hour = hour;
             }
-            if (minute > 60 || minute < 0)
+            if (minute >= 60 || minute < 0)
             {
                 this.minute = 0;
             }
@@ -45,7 +45,7 @@ namespace ClassAndObjects
         }
         public Time(int hour, int minute, int second)
         {
-            if (hour > 24 || hour < 0)
+            if (hour >= 24 || hour < 0)
             {
                 this.hour = 0;
             }
@@ -53,7 +53,7 @@ namespace ClassAndObjects
             {
                 this.hour = hour;
             }
-            if (minute > 60 || minute < 0)
+            if (minute >= 60 || minute < 0)
             {
                 this.minute = 0;
             }
@@ -61,7 +61,7 @@ namespace ClassAndObjects
             {
                 this.minute = minute;
             }
-            if (second > 60 || second < 0)
+            if (second >= 60 || second < 0)
             {
                 this.second = 0;
             }
