@@ -19,7 +19,10 @@ namespace ClassAndObjects
             {
                 this.hour = 0;
             }
-            this.hour = hour;
+            else
+            {
+                this.hour = hour;
+            }
         }
         public Time(int minute, int hour)
         {
@@ -27,12 +30,18 @@ namespace ClassAndObjects
             {
                 this.hour = 0;
             }
-            this.hour = hour;
+            else
+            {
+                this.hour = hour;
+            }
             if (minute > 60 || minute < 0)
             {
                 this.minute = 0;
             }
-            this.minute = minute;
+            else
+            {
+                this.minute = minute;
+            }
         }
         public Time(int hour, int minute, int second)
         {
@@ -40,17 +49,26 @@ namespace ClassAndObjects
             {
                 this.hour = 0;
             }
-            this.hour = hour;
-            if (minute < 60 || minute < 0)
+            else
+            {
+                this.hour = hour;
+            }
+            if (minute > 60 || minute < 0)
             {
                 this.minute = 0;
             }
-            this.minute = minute;
-            if (second < 60 || second < 0)
+            else
+            {
+                this.minute = minute;
+            }
+            if (second > 60 || second < 0)
             {
                 this.second = 0;
             }
-            this.second = second;
+            else
+            {
+                this.second = second;
+            }
         }
         public string GetTime()
         {
@@ -78,10 +96,7 @@ namespace ClassAndObjects
             {
                 return;
             }
-            else
-            {
-                this.hour = hour;
-            }
+            this.hour = hour;
         }
         public void SetMinute(int minute)
         {
@@ -89,10 +104,7 @@ namespace ClassAndObjects
             {
                 return;
             }
-            else
-            {
-                this.minute = minute;
-            }
+            this.minute = minute;
         }
         public void SetSecond(int second)
         {
@@ -100,10 +112,7 @@ namespace ClassAndObjects
             {
                 return;
             }
-            else
-            {
-                this.second = second;
-            }
+            this.second = second;
         }
         public int GetHour()
         {
