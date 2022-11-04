@@ -20,14 +20,21 @@ namespace ClassAndObjects
             //User user2 = new User("pole", "newPass", 10);
             //user2.Print();
 
-            Time nowTime = new Time();
-            nowTime.SetSecond(59);
-            nowTime.SetMinute(59);
-            nowTime.SetHour(07);
-            nowTime.AddSecond(2);
-            string printTime = nowTime.GetTime();
-            Console.WriteLine(printTime);
-            
+            //Time nowTime = new Time();
+            //nowTime.SetSecond(59);
+            //nowTime.SetMinute(59);
+            //nowTime.SetHour(07);
+            //nowTime.AddSecond(2);
+            //string printTime = nowTime.GetTime();
+            //Console.WriteLine(printTime);
+
+            Post newPost = new Post();
+            newPost.SetDescription("i like this world");
+            newPost.SetCountLike(7);
+            newPost.SetAuthorName("Nasty");
+            newPost.SetCreationDate(DateTime.Now);
+            string printPost = newPost.GetInfo();
+            Console.WriteLine(printPost);
         }
     }
 }
