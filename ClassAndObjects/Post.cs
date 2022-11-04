@@ -6,90 +6,90 @@ namespace ClassAndObjects
 {
     class Post
     {
-        private string defenition;
-        private DateTime date;
-        private int like;
-        private string name;
-        public Post(string defenition, DateTime date, int like, string name)
+        private string description;
+        private DateTime creationDate;
+        private int countLike;
+        private string authorName;
+        public Post(string description, DateTime creationDate, int countLike, string authorName)
         {
-            if (defenition == "" || defenition == null)
+            if (description == "" || description == null)
             {
-                return;
+                description = "no description";
             }
             else
             {
-                this.defenition = defenition;
+                this.description = description;
             }
-            this.date = date;
-            if (like < 0)
+            this.creationDate = creationDate;
+            if (countLike < 0)
             {
-                return;
-            }
-            else
-            {
-                this.like = like;
-            }
-            if (name == "" || name == null)
-            {
-                return;
+                countLike = 0;
             }
             else
             {
-                this.name = name;
+                this.countLike = countLike;
+            }
+            if (authorName == "" || authorName == null)
+            {
+                authorName = "no name";
+            }
+            else
+            {
+                this.authorName = authorName;
             }
         }
         public Post()
         {
 
         }
-        public string Print()
+        public string GetInfo()
         {
-            string printPost = ($"definition: {defenition}\n date: {date} \n like: {like} \n name: {name}");
+            string printPost = ($"definition: {description}\n date: {creationDate} \n like: {countLike} \n name: {authorName}");
             return printPost;
         }
-        public string GetDefenition()
+        public string GetDescription()
         {
-            return defenition;
+            return description;
         }
-        public DateTime GetDate()
+        public DateTime GetCreationDate()
         {
-            return date;
+            return creationDate;
         }
-        public int getLike()
+        public int GetCountLike()
         {
-            return like;
+            return countLike;
         }
-        public string GetName()
+        public string GetAuthorName()
         {
-            return name;
+            return authorName;
         }
-        public void setDefenation(string defenition)
+        public void SetDescription(string description)
         {
-            if (defenition == "" || defenition == null)
+            if (description == "" || description == null)
             {
                 return;
             }
-            this.defenition = defenition;
+            this.description = description;
         }
-        public void setDate(DateTime date)
+        public void SetCreationDate(DateTime creationDate)
         {
-            this.date = DateTime.Now;
+            this.creationDate = DateTime.Now;
         }
-        public void setLike(int like)
+        public void SetCountLike(int countLike)
         {
-            if (like < 0 )
+            if (countLike < 0 )
             {
                 return;
             }
-            this.like = like;
+            this.countLike = countLike;
         }
-        public void setName(string name)
+        public void SetAuthorName(string authorName)
         {
-            if (name == "" || name == null)
+            if (authorName == "" || authorName == null)
             {
                 return;
             }
-            this.name = name;
+            this.authorName = authorName;
         }
     }
 }

@@ -29,11 +29,11 @@ namespace ClassAndObjects
             //Console.WriteLine(printTime);
 
             Post newPost = new Post();
-            newPost.setDefenation("i like this world");
+            newPost.setDescription("i like this world");
             newPost.setLike(7);
             newPost.setName("Nasty");
             newPost.setDate(DateTime.Now);
-            string printPost = newPost.Print();
+            string printPost = newPost.GetInfo();
             Console.WriteLine(printPost);
         }
     }
