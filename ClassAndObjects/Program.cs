@@ -29,10 +29,10 @@ namespace ClassAndObjects
             //Console.WriteLine(printTime);
 
             Post newPost = new Post();
-            newPost.setDescription("i like this world");
-            newPost.setLike(7);
-            newPost.setName("Nasty");
-            newPost.setDate(DateTime.Now);
+            newPost.SetDescription("i like this world");
+            newPost.SetCountLike(7);
+            newPost.SetAuthorName("Nasty");
+            newPost.SetCreationDate(DateTime.Now);
             string printPost = newPost.GetInfo();
             Console.WriteLine(printPost);
         }
